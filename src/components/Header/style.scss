@@ -1,0 +1,15 @@
+@import "../../assets/style/scss/config";
+.header{
+  height: 80px;
+  display: flex;
+  gap: 10px;
+  font-family:$main-font ;
+  justify-content: flex-end;
+  padding: 0 60px;
+  font-size: 1.5em;
+  .links{
+    color: #fff;
+    text-decoration: none;
+
+  }
+}

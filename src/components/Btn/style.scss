@@ -1,0 +1,14 @@
+.btn {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 32px;
+  width: 32px;
+  border: none;
+  background: url("../../assets/images/back.png");
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    background: url("../../assets/images/backW.png");
+  }
+}

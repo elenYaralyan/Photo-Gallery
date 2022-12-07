@@ -1,0 +1,60 @@
+@import "../../assets/style/scss/config";
+.unfold-box {
+  width: 600px;
+  height: 360px;
+  transform: rotate(-25deg) skew(25deg);
+  transition: 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  &:hover {
+    transform: rotate(-25deg) skew(-25deg) translateY(-20px);
+  }
+  .elem {
+    width: 25%;
+    height: 100%;
+    background: url("../../assets/images/senary.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: block;
+    transition: 0.5s;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    &:first-child {
+      background-position: calc(-160px * 0);
+      border-left: 5px solid #fff;
+    }
+    &:nth-child(2) {
+      background-position: calc(-160px * 1);
+    }
+    &:nth-child(3) {
+      background-position: calc(-160px * 2);
+    }
+    &:last-child {
+      background-position: calc(-160px * 3);
+      border-right: 5px solid #fff;
+    }
+  }
+  &:hover .elem:nth-child(odd) {
+    transform: skewY(25deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+  }
+  &:hover .elem:nth-child(even) {
+    transform: skewY(-25deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+  }
+}
+.title-unfold {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 2.5em;;
+  color: #002;
+  font-family: $main-font;
+  &:hover{
+    color: #fff;
+  }
+}

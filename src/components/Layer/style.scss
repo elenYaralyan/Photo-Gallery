@@ -1,0 +1,55 @@
+@import "../../assets/style/scss/config";
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px 15px 15px;
+  width: 100%;
+  height: 100vh;
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/images/city.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background: url("../../assets/images/city.jpeg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 20px 0 100px rgba(0, 0, 0, 0.2),
+        -20px 0 100px rgba(0, 0, 0, 0.2);
+      background-size: 120%;
+      background-position: 20% 60%;
+      animation: anima 5s ease-in-out infinite;
+      @keyframes anima {
+        0%,
+        100% {
+          left: 0px;
+        }
+        50% {
+          left: calc(100% - 200px);
+        }
+      }
+    }
+  }
+  .title{
+    position: absolute;
+    top: 0;
+    font-size: 2.5em;;
+    color: #002;
+    font-family: $main-font;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
