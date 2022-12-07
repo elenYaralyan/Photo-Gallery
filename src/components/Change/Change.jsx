@@ -6,9 +6,7 @@ function Change() {
     return Math.floor(Math.random() * 255);
   }
   const colorChange = (e) => {
-    console.log(
-      (e.target.style.backgroundColor = `rgb(${randomColor()},${randomColor()},${randomColor()})`)
-    );
+      e.target.style.backgroundColor = `rgb(${randomColor()},${randomColor()},${randomColor()})`
   };
   return (
     <div className="wrap">
